@@ -2,6 +2,9 @@
   "name": "nodebal",
   "version": "0.1.0",
   "main": "build/index.js",
+  "files": [
+    "build"
+  ],
   "repository": "https://github.com/felps-dev/nodebal",
   "author": "Felipe Correa <eu@felps.dev>",
   "license": "MIT",
