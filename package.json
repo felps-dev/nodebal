@@ -1,7 +1,7 @@
 {
   "name": "nodebal",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "build/index.js",
   "repository": "https://github.com/felps-dev/nodebal",
   "author": "Felipe Correa <eu@felps.dev>",
   "license": "MIT",
