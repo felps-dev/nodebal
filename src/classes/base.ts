@@ -1,7 +1,7 @@
 import { SerialPort } from "serialport";
 import { callWithTimeout } from "../utils";
 
-interface ISerialConfig {
+export interface ISerialConfig {
   baudRate: number;
   dataBits: 5 | 6 | 7 | 8 | undefined;
   stopBits: 1 | 1.5 | 2 | undefined;
