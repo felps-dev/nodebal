@@ -112,6 +112,21 @@ export class BalancaBase {
     return pesoLido;
   }
 
+  /**
+   * Lê o peso da balança
+   * @param preco Preço a ser escrito na balança
+   * @returns Peso lido
+   * @throws {Error} Se ocorrer um erro ao ler o peso
+   *
+   * @example
+   * const balanca = new ToledoUS312POP5("/dev/tty.usbserial-2130");
+   *
+   * balanca
+   *  .lerPeso(300)
+   * .then((peso) => {
+   *   console.log(`Peso lido: ${peso}`);
+   * })
+   * */
   async lerPeso(preco?: number): Promise<number> {
     try {
       await this.abrirPorta();

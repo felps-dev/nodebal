@@ -1,6 +1,6 @@
 import { BalancaBase } from "./base";
 
-export class ToledoUS312POP5 extends BalancaBase {
+export class BalancaPadrao extends BalancaBase {
   defaultConfig = {
     baudRate: 9600 as const,
     dataBits: 8 as const,
