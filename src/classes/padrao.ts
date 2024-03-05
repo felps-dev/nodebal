@@ -8,6 +8,8 @@ export class BalancaPadrao extends BalancaBase {
     parity: "none" as const
   };
 
+  enqCommand = Buffer.from([0x05]);
+
   escreverPreco(preco: number): Buffer {
     const formattedPrice = preco.toFixed(2).replace(".", "").padStart(6, "0");
     const priceMessage = Buffer.from([
