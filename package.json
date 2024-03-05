@@ -1,6 +1,6 @@
 {
   "name": "nodebal",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "repository": "https://github.com/felps-dev/nodebal",
   "author": "Felipe Correa <eu@felps.dev>",
@@ -23,6 +23,7 @@
   "scripts": {
     "dev": "nodemon",
     "build": "rimraf ./build && tsc",
-    "start": "npm run build && node build/index.js"
+    "start": "npm run build && node build/index.js",
+    "prepare": "npm run build"
   }
 }
