@@ -1,2 +1,2 @@
 export { BalancaBase, type ISerialConfig } from "./classes/base";
-export { BalancaPadraoKilo } from "./classes/padrao";
+export { BalancaPadraoKilo, BalancaPadraoGrama } from "./classes/padrao";
