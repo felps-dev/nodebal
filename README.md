@@ -11,10 +11,10 @@ yarn add felps-dev/nodebal
 ## Uso
 
 ```javascript
-import { BalancaPadrao } from "./classes/padrao";
+import { BalancaPadraoKilo } from "./classes/padrao";
 
 // No Windows, o caminho da porta serial é algo como "COM1"
-const balanca = new BalancaPadrao("/dev/tty.usbserial-2130");
+const balanca = new BalancaPadraoKilo("/dev/tty.usbserial-2130");
 
 balanca
   .lerPeso(300) // 300 é o valor do preço enviado a balança
@@ -42,7 +42,8 @@ balanca
 
 ## Balanças suportadas (Testadas)
 
-- [x] Urano US 31/2 POP-S (Testada usando BalancaPadrao)
+- [x] Urano US 31/2 POP-S (Testada usando BalancaPadraoKilo)
+- [x] Toledo Prix 3/16 (Testada usando BalancaPadraoGrama)
 
 ## Adicionando suporte a novas balanças
 
@@ -59,7 +60,7 @@ Sendo:
 ```javascript
 import { BalancaBase } from "./base";
 
-export class BalancaPadrao extends BalancaBase {
+export class BalancaPadraoKilo extends BalancaBase {
   defaultConfig = {
     baudRate: 9600 as const,
     dataBits: 8 as const,
@@ -83,4 +84,4 @@ export class BalancaPadrao extends BalancaBase {
 
 Feito isso basta adicionar o export dela no arquivo `index.ts` e pronto, sua balança já está suportada.
 
-#### Caso o `BalancaPadrao` seja o suficiente para a sua balança, favor abrir um PR para adicionar ela ao README.
+#### Caso o `BalancaPadraoKilo` ou `BalancaPadraoGrama` seja o suficiente para a sua balança, favor abrir um PR para adicionar ela ao README.

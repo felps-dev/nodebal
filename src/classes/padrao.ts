@@ -1,6 +1,11 @@
 import { BalancaBase } from "./base";
 
-export class BalancaPadrao extends BalancaBase {
+export class BalancaPadraoKilo extends BalancaBase {
+  /**
+   * Balança padrão para leitura de peso em kilogramas
+   * Ex: 0,045
+   **/
+
   defaultConfig = {
     baudRate: 9600 as const,
     dataBits: 8 as const,
@@ -29,5 +34,17 @@ export class BalancaPadrao extends BalancaBase {
       return numericWeight;
     }
     throw new Error("Invalid weight response");
+  }
+}
+
+export class BalancaPadraoGrama extends BalancaPadraoKilo {
+  /**
+   * Balança padrão para leitura de peso em gramas
+   * Ex: 45 -> 0,045
+   **/
+  processaPeso(data: Buffer): number {
+    // Extamente igual, mas divide por 1000
+    // para converter de gramas para kilogramas
+    return super.processaPeso(data) / 1000;
   }
 }

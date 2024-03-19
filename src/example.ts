@@ -1,6 +1,6 @@
-import { BalancaPadrao } from "./classes/padrao";
+import { BalancaPadraoKilo } from "./classes/padrao";
 
-const balanca = new BalancaPadrao("/dev/tty.usbserial-2130");
+const balanca = new BalancaPadraoKilo("/dev/tty.usbserial-2130");
 
 balanca
   .lerPeso(300)
