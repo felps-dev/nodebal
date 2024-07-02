@@ -33,7 +33,10 @@ export class BalancaPadraoKilo extends BalancaBase {
       const numericWeight = parseFloat(weight.replace(",", ".")); // Converter para número
       return numericWeight;
     }
-    throw new Error("Invalid weight response");
+    const chars = response.split("").map((char) => char.charCodeAt(0));
+    throw new Error(
+      "Invalid weight response: " + response + " " + chars.join(",")
+    );
   }
 }
 
