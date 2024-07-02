@@ -1,4 +1,4 @@
-import { SerialPort } from "serialport";
+import { SerialPort, InterByteTimeoutParser } from "serialport";
 import { callWithTimeout } from "../utils";
 
 export interface ISerialConfig {
@@ -90,7 +90,10 @@ export class BalancaBase {
     while (pesoLido === 0) {
       pesoLido = await new Promise((resolve, reject) => {
         this.writeCommand(this.enqCommand).catch(reject);
-        this.port.once("data", async (data: Buffer) => {
+        const parser = this.port.pipe(
+          new InterByteTimeoutParser({ interval: 80 })
+        );
+        parser.once("data", async (data: Buffer) => {
           try {
             if (preco != null) {
               const pesoEscrever = this.escreverPreco(preco);
