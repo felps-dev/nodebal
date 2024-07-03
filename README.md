@@ -11,7 +11,7 @@ yarn add felps-dev/nodebal
 ## Uso
 
 ```javascript
-import { BalancaPadraoKilo } from "./classes/padrao";
+import { BalancaPadraoKilo } from "nodebal";
 
 // No Windows, o caminho da porta serial é algo como "COM1"
 const balanca = new BalancaPadraoKilo("/dev/tty.usbserial-2130");
