@@ -44,6 +44,8 @@ balanca
 
 - [x] Urano US 31/2 POP-S (Testada usando BalancaPadraoKilo)
 - [x] Toledo Prix 3/16 (Testada usando BalancaPadraoGrama)
+- [x] Urano POP-Z (Testada usando BalancaPadraoGrama com protocolo PRT1)
+- [x] Toledo Prix 3 fit (Testada usando BalancaPadraoGrama com protocolo PRT1)
 
 ## Adicionando suporte a novas balanças
 
