@@ -1,6 +1,6 @@
 {
   "name": "nodebal",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "main": "build/index.js",
   "files": [
     "build"
@@ -25,7 +25,7 @@
   },
   "scripts": {
     "dev": "nodemon",
-    "build": "rimraf ./build && tsc",
+    "build": "rimraf ./build && tsc --project ./tsconfig.json",
     "start": "npm run build && node build/index.js",
     "prepare": "npm run build",
     "prepack": "npm run build",
