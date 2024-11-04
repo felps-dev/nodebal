@@ -28,7 +28,6 @@
     "build": "rimraf ./build && tsc --project ./tsconfig.json",
     "start": "npm run build && node build/index.js",
     "prepare": "npm run build",
-    "prepack": "npm run build",
-    "postinstall": "npm run build"
+    "prepack": "npm run build"
   }
 }
